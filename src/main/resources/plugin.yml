@@ -1,0 +1,28 @@
+name: PrefX
+version: 1.0
+main: com.ggtb.prefX.PrefX
+api-version: 1.21
+depend: []
+commands:
+  pref:
+    description: Manage prefixes
+    usage: /pref <create|add|rem|del> [...]
+    permission: prefx.op
+  clan:
+    description: Manage clans
+    usage: /clan <create|reset|add|rem|del|leave>
+    permission: prefx.clan
+  display:
+    description: Set display mode
+    usage: /display <clan|prefix>
+  prefixdata:
+    description: Save data
+    usage: /prefixdata save
+    permission: prefx.op
+permissions:
+  prefx.op:
+    description: OP commands
+    default: op
+  prefx.clan:
+    description: Clan management
+    default: true
