@@ -199,7 +199,7 @@ public class Commands implements CommandExecutor {
 
                     String lowerKey = clanName.toLowerCase();
                     Clan c = plugin.getClanMap().get(lowerKey);
-                    if (c == null || !c.leader.equals(player.getUniqueId())) {
+                    if (c == null || !c.leader.equals(player.getUniqueId()) || !sender.isOp()) {
                         sender.sendMessage(Component.text("Ты не лидер этого клана!").color(NamedTextColor.RED));
                         return true;
                     }
@@ -230,7 +230,7 @@ public class Commands implements CommandExecutor {
 
                     String lowerKey = clanName.toLowerCase();
                     Clan c = plugin.getClanMap().get(lowerKey);
-                    if (c == null || !c.leader.equals(player.getUniqueId())) {
+                    if (c == null || !c.leader.equals(player.getUniqueId()) || !sender.isOp()) {
                         sender.sendMessage(Component.text("Ты не лидер этого клана!").color(NamedTextColor.RED));
                         return true;
                     }
